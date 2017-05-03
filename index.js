@@ -95,9 +95,11 @@ var getEmployeeById=function(fname,callback){
 		}
 	});
 };
-
+/** Employee Cache Function For Quick data
+ * params funcion name
+ * */
 var getEmployeeByIdCached=function(redis,fname,callback){
-	
+
 	redis.get(fname, function (err, reply) {
         if (err){
 			callback(null);
